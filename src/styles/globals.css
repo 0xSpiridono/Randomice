@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+@import "embla.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-press {
+  font-family: "Press Start 2P", sans-serif;
+}
+
+.font-rubik {
+  font-family: "Rubik Beastly", sans-serif;
+}
+
+.font-flower {
+font-family: 'Aldrich', sans-serif;
+}
+
+.font-flower {
+  font-family: 'Indie Flower', cursive;
+  }
+
+#left {
+  display: inline-block;
+  width:50%;
+  height:50%;
+  justify-content: center;
+
+
+}
+
+#right {
+  display: inline-block;
+  width:50%;
+  height:50%;
+  justify-content: center;
+  
+ 
+
+}
+
+
+/* Solid border */
+hr.solid {
+  border-bottom: 3px solid rgb(77, 77, 77);
+}
+
+/*Static BG pattern */
+.bg-pattern {
+  background:
+  linear-gradient(
+      var(--bg-gradient_1) 0%,
+      var(--bg-gradient_2) 100%
+    )
+    ;
+
+    background-color: var(--dark-grey);
+    background-image: url("/images/BG.png");
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #f4f4f4;
+  background: #6e0cca;
+}
+
+::selection {
+  color: #f4f4f4;
+  background: #6e0cca;
+}
+
+.gradient-background {
+  background: linear-gradient(213deg, #a89ff7, #ffaedb, #dfff95, #33c2d0);
+  background-size: 240% 240%;
+  animation: gradient-animation 12s ease infinite;
+}
+
+.underlined {
+  position: relative;
+}
+
+.underlined::after {
+  content: "";
+  position: absolute;
+  bottom: -1.525rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  height: 40px;
+  z-index: 0;
+
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg");
+  background-repeat: no-repeat;
+  
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*
+  specify the scroll x (or y) with the width (or height) of the images
+  In this case, the image dimension is :
+  width: 1920px;
+  height: 808px;
+*/
+
+@keyframes bgScroll {
+  0% {
+    background-position : 0px 0px
+  }
+  100% {
+    background-position : 0px -640px
+  }
+}
+
+.scrollingBG {
+  background-image:url("/images/BG.png");
+  animation: bgScroll 20s linear infinite;
+  display: flex;
+  flex-direction: column;
+ }
