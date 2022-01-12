@@ -10,18 +10,18 @@ function MyApp({ Component, pageProps }) {
 				<title>Randomice</title>
 
 				<meta name="title" content="Randomice NFT"/>
-				<meta name="description" content="Randomice, built by mice, for mice"/>
+				<meta name="description" content="Randomice, built by mice, for everyone"/>
 
 				<meta property="og:type" content="website"/>
 				<meta property="og:url" content="https://randomice.io"/>
 				<meta property="og:title" content="Randomice NFT"/>
-				<meta property="og:description" content="Randomice, built by mice, for mice"/>
+				<meta property="og:description" content="Randomice, built by mice, for everyone"/>
 				<meta property="og:image" content="/Banner16x9.png"/>
 
 				<meta property="twitter:card" content="summary_large_image"/>
 				<meta property="twitter:url" content="https://randomice.io/"/>
 				<meta property="twitter:title" content="Randomice NFT"/>
-				<meta property="twitter:description" content="Randomice, built by mice, for mice"/>
+				<meta property="twitter:description" content="Randomice, built by mice, for everyone"/>
 				<meta property="twitter:image" content="/Banner16x9.png"/>
 			
 				<link
