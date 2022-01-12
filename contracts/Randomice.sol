@@ -1274,7 +1274,47 @@ abstract contract Ownable is Context {
 
 
 
-
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@%%%%   %%%%%%%%%%%%%%%   %%%%%%%%%%%%%%%%%%%@%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%@%%%% ## %%%%%%%%%%%%%%  &  %%%%%%%%%%%%%%%%@@@@%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%@@%%% ###  %%%%%%%%%%%%  && %%%%%%%%%%%%%%%%%%@%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  #@## %%%%%@@%%%% &&&& %%%%%%%%%%%%%    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   #@@### %%%%%@%%  && && #%%%%%%%%%%%  && %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  (  #@####&  %%%%  &&   &&  %%%%%%%%%  &&&&  @@@@@@@   %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% / ##@####&&     &&. (%  &&  %%%%%%  &&&@&  @        @% %%%%%%%%%%%%%%%%
+%%%%%%%%%              %%%%%%  #@@####&&&&&&&&     % &&&  %   &&&&&@@&  %%%%%%%%  @  %%%%%%%%%%%%%%%
+%%%%%%   @@@@@@@@@@@@@@@@   %  ##@####&&&&&&&&& ((%  &&&&&&&&&&&&&&@&  ( %%%%%%%% @* %%%%%%%%%%%%%%%
+%%%%%  @@@@@.         @@@@@@@  ##@#####&&&&&&&&    &&&&&&&&&&&&&&&@&& ((  %%%%%%  @  %%%%%%%%%%%%%%%
+%%%%  @@@@  %%%%%%%%%%%  &@@@@@@        /&&&&&@&  @&&&&&&&&&&&&&&@&&   %%%%%%%%  @  %%%%%%%%%%%%%%%%
+%%%%  @@@* %%%%%%%%%%%%%%  @@@@@@@@@@@@@@@@@@         @&&&@@@@@@@&&  %%%%%%%%% .@  %%%%%%%%%%%%%%%%%
+%%%%% @@@  %%%%%%%%%%%%%%%% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@&*        %%%%%%%%  *@&  %%%%%%%%%%%%%%%%%%
+%%%%%  @@@ /%%%%%%%%%%%%%%%  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   %    #@@@  %%%%%%%%%%%%%%%%%%%%
+%%%%%%%  @@  %%%%%%%%%%%%%% #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&  %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%  &@&  %%%%%%%%%%%  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  @@@         @@@@@@@@@@@@@@   @@@@@   @@@@@@@@@@@@@@@  @@@@@@@   %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%#  .@@@@@@@@@@@@@@@@@@@@ ,@@@@@@@@@   &@@@@@@@@@@@  @@@@@@@@     %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%     @@@@@@@@@@@@@ @@@@@@         @@@@@@@@@@  @@@@           %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%  @@@@@@@@@@                @@@@@@@@@@                %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% %@@@@@@@@@@  @@           @@@@@@@@@@@@   @@    @    %%%%%%%%%%% .%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%  @@@@@@@@@@@@   @*     &@@@@@@@@@@@@@@@@@        %%%%%%%%%%%%%  %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  %%  ,@@@ ( %%           %%%   %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%, @@%    @@@@@@@      @@@     ,@  %%%%  @@@@@ %%%%%%%%%%%%%%%  & %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  @@@@@@@@    @@@@@@@@@@@@@   @@@    &@@&@@        %%%%%%%%%% ,&  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% &@@@@@@@@@@@@@@@@@#     @@@@@@@@@@@@@@@@@  %%%%%%%%%%%%%  %%  &&  %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% @@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@  %%%%%%%%%%%%%%%%%%  && %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  @@@@  @@@@@@@@@@@@@@@@@@@@@@   #@@@@  %%%%%%%%%%%%%%%%%  &&  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    &@@@@@@@@@@@@@@@@@@@@@@  ,,,,       %%%%%%%%%%%%%%  &  %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  @@@@@@@@@@@@@@@@@@@@@@  @   ,  ,,,,,      %%%%%%%%   %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   //  @@@@@@@@@@@@@@@@@@@  @@@@@    ,,,, *,,,,,    %%%%  %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  ///////   @@@@@@@@@@@@@@@@@@@   /////     ,,,,,  ,,     %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  ///////////    @@@@@@@@@    //////////  %  ,,,,,   ////  %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%    ///////////////////////////////////// #%%%%     ////  %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  /// /////////////////////////////////     %%%%%%%      %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% //////////////////////////////////////////  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% //////////////////////@///////@@@@/////////// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%  //////////////@@@@%@@//@//@////@@&///////////  %%%%%%%%%@spiridono%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%% //////////  ///@//////@/////@@@///////  ///////  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
 
 
 
@@ -1283,15 +1323,15 @@ pragma solidity ^0.8.10;
 
 contract RandoMice is ERC721Enum, Ownable, Pausable,  ReentrancyGuard {
 	using Strings for uint256;
-    
+
 	string public baseURI;
 	uint256 public cost = 0.025 ether;
 	uint256 public maxSupply = 5000;
 	uint256 public maxMint = 10;
 	bool public status = true;
 	
-    address miceAddr = 0xbad6186E92002E312078b5a1dAfd5ddf63d3f731;
-    address doodlesAddr = 0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e;
+    address miceAddr = 0x424094ac5280f0c1E935511814686473B995A0b4;//0xbad6186E92002E312078b5a1dAfd5ddf63d3f731
+    address doodlesAddr = 0x07b0E00E290584912793cFd769bB89Cd1aDC2152;//0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e
 
     mapping(address => bool) public mintlist;
 
@@ -1313,14 +1353,14 @@ contract RandoMice is ERC721Enum, Ownable, Pausable,  ReentrancyGuard {
 	    return baseURI;
 	}
 
-    function isHolder(address _wallet) public view returns (bool holder, uint256 miceBalance, uint256 doodlesBalance) {
+    function isHolder(address _wallet) public view returns (bool) {
         ERC721Enum miceToken = ERC721Enum(miceAddr);
         uint256 _miceBalance = miceToken.balanceOf(_wallet);
     
         ERC721Enum doodlesToken = ERC721Enum(doodlesAddr);
         uint256 _doodlesBalance = doodlesToken.balanceOf(_wallet);
 
-        return (_miceBalance + _doodlesBalance > 0, _miceBalance, _doodlesBalance);
+        return (_miceBalance + _doodlesBalance > 0);
   }
 
 	function mint(uint256 _mintAmount) public payable nonReentrant{
@@ -1329,7 +1369,7 @@ contract RandoMice is ERC721Enum, Ownable, Pausable,  ReentrancyGuard {
         require(msg.sender == tx.origin, "No contracts!");
 		require(_mintAmount <= maxMint, "Too many" );
 		require(s + _mintAmount <= maxSupply, "Would excced supply" );
-	//	require(msg.value >= cost * _mintAmount, "Not enough ETH");
+		require(msg.value >= cost * _mintAmount, "Not enough ETH");
 		for (uint256 i = 0; i < _mintAmount; ++i) {
 			_safeMint(msg.sender, s + i, "");
         
@@ -1337,12 +1377,17 @@ contract RandoMice is ERC721Enum, Ownable, Pausable,  ReentrancyGuard {
 		delete s;
 	}
 
-    function claim(address _wallet) external payable {
-        (bool _holder, , ) = isHolder(_wallet);
+    function claim(address _wallet) external nonReentrant {
+        uint256 s = totalSupply();
+        require(status, "Sale inactive" );
+        require(msg.sender == tx.origin, "No contracts!");
+		require(s + 1 <= maxSupply, "Would excced supply" );
+        (bool _holder) = isHolder(_wallet);
         require(_holder, "Must own at least one Anonymice or Doodles to claim!");
         require(mintlist[_wallet] != true, "You've already claimed your RandoMice!");
         mintlist[_wallet] = true;
-        mint(1);
+        _safeMint(msg.sender, s++, "");
+        delete s;
     }
 
 	function gift(uint[] calldata quantity, address[] calldata recipient) external onlyOwner{
@@ -1380,8 +1425,8 @@ contract RandoMice is ERC721Enum, Ownable, Pausable,  ReentrancyGuard {
 	function setBaseURI(string memory _newBaseURI) public onlyOwner {
 	    baseURI = _newBaseURI;
 	}
-	function setSaleStatus(bool _status) public onlyOwner {
-	    status = _status;
+	function flipSaleStatus() public onlyOwner {
+	    status = !status;
 	}
 	function withdraw() public payable onlyOwner {
 	(bool success, ) = payable(msg.sender).call{value: address(this).balance}("");

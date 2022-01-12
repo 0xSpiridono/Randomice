@@ -35,15 +35,14 @@ export default function Hero() {
   }, []);
 
   const updateTotalSupply = async () => setTotalSupply(await getTotalSupply());
-  const updateIsPublicSaleActive = async () =>
-    setIsPublicSaleActive(await getPublicState());
+  const updateIsPublicSaleActive = async () => setIsPublicSaleActive(await getPublicState());
 
   return (
     <main id="main" className=" pt-10 pb-20 scrollingBG ">
       <div className="flex flex-wrap items-center   ">
         <div className="container relative flex flex-wrap py-3 pt-16 mx-auto mt-10 sm:mx-auto lg:w-10/12 md:w-10/12 sm:w-10/12  ">
           <div className=""></div>
-          <div className="container relative px-4 py-10 bg-gray-100 shadow-lg sm:rounded-3xl sm:p-4 gradient-background border-solid border-4 border-indigo-400">
+          <div className="container relative px-4 py-10 bg-gray-100 shadow-lg sm:rounded-3xl sm:p-4 gradient-background border-solid border-4 border-indigo-600">
             <div className="container relative flex flex-wrap px-8 py-8 lg:flex-nowrap">
               {/* Info */}
               <HeroInfo
@@ -62,7 +61,6 @@ export default function Hero() {
                 <HeroMint
                   currentAccount={currentAccount}
                   isPublicSaleActive={isPublicSaleActive}
-               
                   maxMintAmount={maxMintAmount}
                   nftPrice={nftPrice}
                   setStatus={setStatus}

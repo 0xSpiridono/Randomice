@@ -105,17 +105,24 @@ export const getNftPrice = async () => {
 
 export const getPublicState = async () => {
   const result = await contract.methods.status().call();
-  return result == true;
+  return result;
 };
 
 export const getFreeClaimedByAddress = async () => {
   if (window.ethereum.selectedAddress) {
-    const result = await contract.methods
-      .mintlist(window.ethereum.selectedAddress)
-      .call();
+    const result = await contract.methods.mintlist(window.ethereum.selectedAddress).call();
     return result;
   }
 };
+
+export const getIsWhitelisted = async () => {
+  if (window.ethereum.selectedAddress) {
+    const result = await contract.methods.isHolder(window.ethereum.selectedAddress).call();
+    return result;
+  }
+};
+
+
 
 export const mintNFT = async (mintAmount) => {
   if (!window.ethereum.selectedAddress) {
@@ -153,7 +160,7 @@ export const mintNFT = async (mintAmount) => {
           <p>
             {" "}
             <a>
-              Your Randomice is minting! <p>&nbsp;</p> Once transaction is
+              Your RandoMice is minting! <p>&nbsp;</p> Once transaction is
               approved, check it out on
             </a>
             <a
@@ -177,7 +184,7 @@ export const mintNFT = async (mintAmount) => {
   }
 };
 
-export const claimNFT = async (proof) => {
+export const claimNFT = async (address) => {
   if (!window.ethereum.selectedAddress) {
     return {
       success: false,
@@ -194,9 +201,8 @@ export const claimNFT = async (proof) => {
   const transactionParameters = {
     to: Randomice_ADDRESS, // Required except during contract publications.
     from: window.ethereum.selectedAddress, // must match user's active address.
-    value: 0,
     gasLimit: "0",
-    data: contract.methods.claim(proof).encodeABI(), //make call to NFT smart contract
+    data: contract.methods.claim(address).encodeABI(), //make call to NFT smart contract
   };
   //sign the transaction via Metamask
   try {
@@ -211,7 +217,7 @@ export const claimNFT = async (proof) => {
           <p>
             {" "}
             <a>
-              Your Randomice is minting! <p>&nbsp;</p> Once transaction is
+              Your RandoMice is minting! <p>&nbsp;</p> Once transaction is
               approved, check it out on
             </a>
             <a

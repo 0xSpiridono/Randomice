@@ -155,7 +155,7 @@ export default function FAQ() {
 											</a>
 										</Link>.
 										  <p>&nbsp;</p>
-										  All the separate parts were ran through a custom Python script that randomly combined them based on each part's rarity profile.
+										  All the separate parts were ran through a custom Python script that randomly combined them based on each part&apos;s rarity profile.
 										  <p>&nbsp;</p>
 										  Resulting images and metadata were uploaded to a decentralized file system (IPFS) and linked to RandoMice smart contract.  
 									</p>
@@ -222,7 +222,7 @@ export default function FAQ() {
 							<ul>
 								<li>
 									<p className="mt-4 lg:text-2xl text-xl leading-normal text-left text-gray-600 font-flower ">
-										🐭 <a className="font-semibold text-purple-600">Maximum supply:</a> 5,000.
+										🐭 <a className="font-semibold text-purple-600">Maximum supply:</a> 6,969.
 										<p>&nbsp;</p>
 										🐭 <a className="font-semibold text-purple-600">White list:</a> RandoMice are FREE to mint for owners of Anonymice and Doodles, max 1 per address.
 										<p>&nbsp;</p>
@@ -371,12 +371,12 @@ export default function FAQ() {
 							<ul>
 								<li>
 									<p className="mt-4 lg:text-2xl text-xl leading-normal text-justify text-gray-600 font-flower ">
-										The RandoMice were created as fun collection catering awesome NFT communities of Anonymice and Doodles and are
+										RandoMice were created as a fun collection catering to awesome NFT communities of Anonymice and Doodles and are
 										intended for people to enjoy collecting, not as a financial
 										instrument. The creator makes absolutely no promises or
 										guarantees regarding the value of the RandoMice. Hopefully
-										RandoMice go to the moon, but like anything in life, don’t
-										spend money you can’t afford to not have.
+										RandoMice go to the moon, but like anything in life, don&apos;t
+										spend money you can&apos;t afford to not have.
 									</p>
 								</li>
 							</ul>

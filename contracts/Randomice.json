@@ -82,7 +82,14 @@
 		],
 		"name": "claim",
 		"outputs": [],
-		"stateMutability": "payable",
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "flipSaleStatus",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -303,19 +310,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_status",
-				"type": "bool"
-			}
-		],
-		"name": "setSaleStatus",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -496,18 +490,8 @@
 		"outputs": [
 			{
 				"internalType": "bool",
-				"name": "holder",
+				"name": "",
 				"type": "bool"
-			},
-			{
-				"internalType": "uint256",
-				"name": "miceBalance",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "doodlesBalance",
-				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
