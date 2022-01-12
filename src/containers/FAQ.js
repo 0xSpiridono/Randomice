@@ -225,6 +225,7 @@ export default function FAQ() {
 										🐭 <a className="font-semibold text-purple-600">Maximum supply:</a> 6,969.
 										<p>&nbsp;</p>
 										🐭 <a className="font-semibold text-purple-600">White list:</a> RandoMice are FREE to mint for owners of Anonymice and Doodles, max 1 per address.
+										Your qualifying token must be in your wallet to claim a free RandoMouse.
 										<p>&nbsp;</p>
 										🐭 <a className="font-semibold text-purple-600">Public sale:</a> Publicly available RandoMice cost 0.025 ETH, max 10 per transaction.
 										<p>&nbsp;</p>

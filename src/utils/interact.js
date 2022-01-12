@@ -92,7 +92,7 @@ export const getMaxMintAmount = async () => {
 };
 
 export const getTotalSupply = async () => {
-  const result = await contract.methods.totalSupply().call();
+  const result = await contract.methods.minted().call();
   return result;
 };
 
