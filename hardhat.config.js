@@ -21,7 +21,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: {
-    version: "0.8.10",
+    version: "0.8.11",
     settings: {
       optimizer: {
         enabled: true,
@@ -34,6 +34,11 @@ module.exports = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       url: process.env.NEXT_PUBLIC_API_URL || "",
+    },
+    mainnet: {
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      url: process.env.NEXT_PUBLIC_API_URL_MAINNET || "",
     },
   },
   etherscan: {

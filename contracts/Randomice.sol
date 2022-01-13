@@ -703,234 +703,6 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
 
 pragma solidity ^0.8.0;
 
-// CAUTION
-// This version of SafeMath should only be used with Solidity 0.8 or later,
-// because it relies on the compiler's built in overflow checks.
-
-/**
- * @dev Wrappers over Solidity's arithmetic operations.
- *
- * NOTE: `SafeMath` is no longer needed starting with Solidity 0.8. The compiler
- * now has built in overflow checking.
- */
-library SafeMath {
-    /**
-     * @dev Returns the addition of two unsigned integers, with an overflow flag.
-     *
-     * _Available since v3.4._
-     */
-    function tryAdd(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            uint256 c = a + b;
-            if (c < a) return (false, 0);
-            return (true, c);
-        }
-    }
-
-    /**
-     * @dev Returns the substraction of two unsigned integers, with an overflow flag.
-     *
-     * _Available since v3.4._
-     */
-    function trySub(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            if (b > a) return (false, 0);
-            return (true, a - b);
-        }
-    }
-
-    /**
-     * @dev Returns the multiplication of two unsigned integers, with an overflow flag.
-     *
-     * _Available since v3.4._
-     */
-    function tryMul(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            // Gas optimization: this is cheaper than requiring 'a' not being zero, but the
-            // benefit is lost if 'b' is also tested.
-            // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522
-            if (a == 0) return (true, 0);
-            uint256 c = a * b;
-            if (c / a != b) return (false, 0);
-            return (true, c);
-        }
-    }
-
-    /**
-     * @dev Returns the division of two unsigned integers, with a division by zero flag.
-     *
-     * _Available since v3.4._
-     */
-    function tryDiv(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            if (b == 0) return (false, 0);
-            return (true, a / b);
-        }
-    }
-
-    /**
-     * @dev Returns the remainder of dividing two unsigned integers, with a division by zero flag.
-     *
-     * _Available since v3.4._
-     */
-    function tryMod(uint256 a, uint256 b) internal pure returns (bool, uint256) {
-        unchecked {
-            if (b == 0) return (false, 0);
-            return (true, a % b);
-        }
-    }
-
-    /**
-     * @dev Returns the addition of two unsigned integers, reverting on
-     * overflow.
-     *
-     * Counterpart to Solidity's `+` operator.
-     *
-     * Requirements:
-     *
-     * - Addition cannot overflow.
-     */
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a + b;
-    }
-
-    /**
-     * @dev Returns the subtraction of two unsigned integers, reverting on
-     * overflow (when the result is negative).
-     *
-     * Counterpart to Solidity's `-` operator.
-     *
-     * Requirements:
-     *
-     * - Subtraction cannot overflow.
-     */
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a - b;
-    }
-
-    /**
-     * @dev Returns the multiplication of two unsigned integers, reverting on
-     * overflow.
-     *
-     * Counterpart to Solidity's `*` operator.
-     *
-     * Requirements:
-     *
-     * - Multiplication cannot overflow.
-     */
-    function mul(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a * b;
-    }
-
-    /**
-     * @dev Returns the integer division of two unsigned integers, reverting on
-     * division by zero. The result is rounded towards zero.
-     *
-     * Counterpart to Solidity's `/` operator.
-     *
-     * Requirements:
-     *
-     * - The divisor cannot be zero.
-     */
-    function div(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a / b;
-    }
-
-    /**
-     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
-     * reverting when dividing by zero.
-     *
-     * Counterpart to Solidity's `%` operator. This function uses a `revert`
-     * opcode (which leaves remaining gas untouched) while Solidity uses an
-     * invalid opcode to revert (consuming all remaining gas).
-     *
-     * Requirements:
-     *
-     * - The divisor cannot be zero.
-     */
-    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
-        return a % b;
-    }
-
-    /**
-     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on
-     * overflow (when the result is negative).
-     *
-     * CAUTION: This function is deprecated because it requires allocating memory for the error
-     * message unnecessarily. For custom revert reasons use {trySub}.
-     *
-     * Counterpart to Solidity's `-` operator.
-     *
-     * Requirements:
-     *
-     * - Subtraction cannot overflow.
-     */
-    function sub(
-        uint256 a,
-        uint256 b,
-        string memory errorMessage
-    ) internal pure returns (uint256) {
-        unchecked {
-            require(b <= a, errorMessage);
-            return a - b;
-        }
-    }
-
-    /**
-     * @dev Returns the integer division of two unsigned integers, reverting with custom message on
-     * division by zero. The result is rounded towards zero.
-     *
-     * Counterpart to Solidity's `/` operator. Note: this function uses a
-     * `revert` opcode (which leaves remaining gas untouched) while Solidity
-     * uses an invalid opcode to revert (consuming all remaining gas).
-     *
-     * Requirements:
-     *
-     * - The divisor cannot be zero.
-     */
-    function div(
-        uint256 a,
-        uint256 b,
-        string memory errorMessage
-    ) internal pure returns (uint256) {
-        unchecked {
-            require(b > 0, errorMessage);
-            return a / b;
-        }
-    }
-
-    /**
-     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
-     * reverting with custom message when dividing by zero.
-     *
-     * CAUTION: This function is deprecated because it requires allocating memory for the error
-     * message unnecessarily. For custom revert reasons use {tryMod}.
-     *
-     * Counterpart to Solidity's `%` operator. This function uses a `revert`
-     * opcode (which leaves remaining gas untouched) while Solidity uses an
-     * invalid opcode to revert (consuming all remaining gas).
-     *
-     * Requirements:
-     *
-     * - The divisor cannot be zero.
-     */
-    function mod(
-        uint256 a,
-        uint256 b,
-        string memory errorMessage
-    ) internal pure returns (uint256) {
-        unchecked {
-            require(b > 0, errorMessage);
-            return a % b;
-        }
-    }
-}
-
-
-
-
-pragma solidity ^0.8.0;
-
 /**
  * @dev Collection of functions related to the address type
  */
@@ -1401,7 +1173,7 @@ abstract contract Ownable is Context {
 /*built by mice, for everyone*/
 pragma solidity ^0.8.10;
 
-contract RandoMice is ERC721, Ownable, ReentrancyGuard {
+contract Randomice is ERC721, Ownable, ReentrancyGuard {
 	using Strings for uint256;
 
 	string public baseURI;
@@ -1411,15 +1183,16 @@ contract RandoMice is ERC721, Ownable, ReentrancyGuard {
 	uint256 public maxMint = 10;
 	bool public status = false;
 	
-    address miceAddr = 0xbad6186E92002E312078b5a1dAfd5ddf63d3f731; //Anonymice
-    address doodlesAddr = 0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e; //Doodles
+    address miceAddr = 0xbad6186E92002E312078b5a1dAfd5ddf63d3f731;      //Anonymice
+    address doodlesAddr = 0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e;   //Doodles
+    address babyMiceAddr = 0x15Cc16BfE6fAC624247490AA29B6D632Be549F00;  //Baby Mice
 
     mapping(address => bool) public mintlist;
 
 	constructor() ERC721("RandoMice", "RMICE") {}
 
 
-    //checks if address owns at least one token from either of the quelifying collections
+    //checks if address owns at least one token from either of the qualifying collections
     function isHolder(address _wallet) public view returns (bool) {
         ERC721 miceToken = ERC721(miceAddr);
         uint256 _miceBalance = miceToken.balanceOf(_wallet);
@@ -1427,7 +1200,10 @@ contract RandoMice is ERC721, Ownable, ReentrancyGuard {
         ERC721 doodlesToken = ERC721(doodlesAddr);
         uint256 _doodlesBalance = doodlesToken.balanceOf(_wallet);
 
-        return (_miceBalance + _doodlesBalance > 0);
+        ERC721 babyMiceToken = ERC721(babyMiceAddr);
+        uint256 _babyMiceBalance = babyMiceToken.balanceOf(_wallet);
+
+        return (_miceBalance + _doodlesBalance + _babyMiceBalance > 0);
   }
 
 
@@ -1438,8 +1214,7 @@ contract RandoMice is ERC721, Ownable, ReentrancyGuard {
 		require(_mintAmount <= maxMint, "Too many" );
 		require(minted + _mintAmount <= maxSupply, "Would excced supply" );
 		require(msg.value >= cost * _mintAmount, "Not enough ETH");
-   
-		for (uint256 i = 0; i < _mintAmount; i++) {
+   		for (uint256 i = 0; i < _mintAmount; i++) {
             minted++;
 			_safeMint(msg.sender, minted);
 		}
@@ -1452,7 +1227,7 @@ contract RandoMice is ERC721, Ownable, ReentrancyGuard {
         require(msg.sender == tx.origin, "No contracts!");
 		require(minted + 1 <= maxSupply, "Would excced supply" );
         (bool _holder) = isHolder(_wallet);
-        require(_holder, "Must own at least one Anonymice or Doodles to claim!");
+        require(_holder, "Must own at least one qualifying NFT to claim!");
         require(mintlist[_wallet] != true, "Already claimed!");
         mintlist[_wallet] = true;
         minted++;
@@ -1493,6 +1268,10 @@ contract RandoMice is ERC721, Ownable, ReentrancyGuard {
 
     function setDoodlesAddress(address _doodlesAddr) external onlyOwner {
         doodlesAddr = _doodlesAddr;
+    }
+
+    function setBabyMiceAddress(address _babyMiceAddr) external onlyOwner {
+        babyMiceAddr = _babyMiceAddr;
     }
 
 	function setCost(uint256 _newCost) public onlyOwner {
