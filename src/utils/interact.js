@@ -1,7 +1,7 @@
 import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 import { abis, contracts } from "../constants";
 
-const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_API_URL);
+const web3 = createAlchemyWeb3(process.env.NEXT_PUBLIC_API_URL_MAINNET);
 
 const Randomice_ADDRESS = contracts.Randomice_ADDRESS;
 const contract = new web3.eth.Contract(abis.Randomice_ABI, Randomice_ADDRESS);
