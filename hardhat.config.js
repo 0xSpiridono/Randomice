@@ -33,12 +33,17 @@ module.exports = {
     rinkeby: {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      url: process.env.NEXT_PUBLIC_API_URL || "",
+        url: process.env.NEXT_PUBLIC_API_URL || "",
     },
     mainnet: {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      url: process.env.NEXT_PUBLIC_API_URL_MAINNET || "",
+        url: process.env.NEXT_PUBLIC_API_URL_MAINNET || "",
+    },
+    matic: {
+      accounts:
+      process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      url: process.env.NEXT_PUBLIC_API_URL_MATIC || "",
     },
   },
   etherscan: {
