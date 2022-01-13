@@ -173,7 +173,7 @@ export const mintNFT = async (mintAmount) => {
         </span>
       ),
 
-      //   "Check out your transaction on Etherscan: https://rinkeby.etherscan.io/tx/" +
+      //   "Check out your transaction on Etherscan: https://etherscan.io/tx/" +
       //   txHash,
     };
   } catch (error) {
@@ -230,7 +230,7 @@ export const claimNFT = async (address) => {
         </span>
       ),
 
-      //   "Check out your transaction on Etherscan: https://rinkeby.etherscan.io/tx/" +
+      //   "Check out your transaction on Etherscan: https://etherscan.io/tx/" +
       //   txHash,
     };
   } catch (error) {
