@@ -23,7 +23,11 @@ export default function HeroInfo({ nftPrice, maxMintAmount }) {
 							<span className="flex items-center h-6 sm:h-7">🐭</span>
 							<p className="ml-2 font-flower">
 								Free to claim by owners of {" "}
-								<a className="font-semibold text-purple-600">Anonymice</a> and <a className="font-semibold text-purple-600">Doodles</a> NFT collections (max 1 per wallet){" "}
+										<a href="https://opensea.io/collection/anonymice" target="_blank" rel="noreferrer" className="font-semibold text-purple-600 hover:text-cyan-700">Anonymice</a> (including 
+										 <a href="https://opensea.io/collection/anonymicebreeding" target="_blank" rel="noreferrer" className="font-semibold text-purple-600 hover:text-cyan-700">Baby Mice</a>!) and 
+										 
+										 <a href="https://opensea.io/collection/doodles-official" target="_blank" rel="noreferrer" className="font-semibold text-purple-600 hover:text-cyan-700"> Doodles </a>
+										  NFT collections, max 1 per wallet{" "}
 								<p>&nbsp;</p>
 							</p>
 						</li>
@@ -40,7 +44,7 @@ export default function HeroInfo({ nftPrice, maxMintAmount }) {
 							<p className="ml-2 font-flower">
 								Each RandoMouse is randomly generated from{" "}
 								<a className="font-semibold text-purple-600">
-								165 badass traits
+								186 badass traits
 								</a>{" "}
 								  of different rarities and permanently stored on decentralised web (IPFS).
 								<p>&nbsp;</p>

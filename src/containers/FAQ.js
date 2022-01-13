@@ -5,7 +5,7 @@ import FAQTitle from "../components/FAQ/FAQTitle";
 
 export default function FAQ() {
 	const [faq1, setFaq1] = useState(false);
-
+	const [faq2, setFaq2] = useState(false);
 	const [faq3, setFaq3] = useState(false);
 	const [faq4, setFaq4] = useState(false);
 	const [faq5, setFaq5] = useState(false);
@@ -83,6 +83,76 @@ export default function FAQ() {
 										{" "}- founder, dev and artist. Long term crypto enthusiast, self-proclaimed blockchain
 										developer, dad, cat lover, degen.
 
+									</p>
+								</li>
+							</ul>
+						)}
+					</div>
+
+
+					<div className="p-8 bg-gray-100 rounded shadow">
+						<div className="flex items-center justify-between">
+							<div>
+								<h2
+									onClick={() => setFaq2(!faq2)}
+									className="font-bold leading-none text-gray-800 uppercase cursor-pointer font-flower lg:text-4xl text-2xl"
+								>
+									ROADMAP?
+								</h2>
+							</div>
+							<button
+								onClick={() => setFaq2(!faq2)}
+								data-menu
+								className="cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white"
+							>
+								{faq3 ? (
+									<svg
+										role="button"
+										aria-label="close dropdown"
+										width="20"
+										height="20"
+										viewBox="0 0 10 10"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1 5L5 1L9 5"
+											stroke="#4B5563"
+											strokeWidth="1.5"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+										/>
+									</svg>
+								) : (
+									<svg
+										width="20"
+										role="button"
+										aria-label="open dropdown"
+										height="20"
+										viewBox="0 0 10 10"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1 1L5 5L9 1"
+											stroke="#4B5563"
+											strokeWidth="1.5"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+										/>
+									</svg>
+								)}
+							</button>
+						</div>
+						{faq2 && (
+							<ul>
+								<li>
+									<p className="mt-4 lg:text-2xl text-xl leading-normal text-justify text-gray-600 font-flower ">
+										RandoMice were created as a nice little gift to the awesome comunities of Anonymice and Doodles and don&apos;t promise anything but positive vibes. {""}
+
+										  <p>&nbsp;</p>
+										  It&apos;s up to the comunity to take the RandoMice to a different level.
+										  									    
 									</p>
 								</li>
 							</ul>
@@ -224,8 +294,8 @@ export default function FAQ() {
 									<p className="mt-4 lg:text-2xl text-xl leading-normal text-left text-gray-600 font-flower ">
 										🐭 <a className="font-semibold text-purple-600">Maximum supply:</a> 6,969.
 										<p>&nbsp;</p>
-										🐭 <a className="font-semibold text-purple-600">White list:</a> RandoMice are FREE to mint for owners of Anonymice and Doodles, max 1 per address.
-										Your qualifying token must be in your wallet to claim a free RandoMouse.
+										🐭 <a className="font-semibold text-purple-600">White list:</a> RandoMice are FREE to mint for owners of Anonymice, Baby Mice and Doodles, max 1 per address.
+										Your qualifying token must be in your wallet in order to claim a free RandoMouse.
 										<p>&nbsp;</p>
 										🐭 <a className="font-semibold text-purple-600">Public sale:</a> Publicly available RandoMice cost 0.025 ETH, max 10 per transaction.
 										<p>&nbsp;</p>

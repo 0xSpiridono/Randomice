@@ -5,5 +5,5 @@ export const abis = {
 };
 
 export const contracts = {
-  Randomice_ADDRESS: "0xc51317BA5093659139cA13b1d0de1E6439b590Dc",
+  Randomice_ADDRESS: "0xbbd66C26e5bcAddDAFE88fe414aCFD0603800900",
 };

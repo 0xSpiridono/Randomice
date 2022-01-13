@@ -221,6 +221,19 @@
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "_babyMiceAddr",
+				"type": "address"
+			}
+		],
+		"name": "setBabyMiceAddress",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "string",
 				"name": "_newBaseURI",
 				"type": "string"
