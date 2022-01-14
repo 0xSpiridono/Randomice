@@ -3,7 +3,7 @@ export default function HeaderSocial() {
 		<nav aria-label="Contact Menu">
 			<ul className="flex items-center px-8 py-1 space-x-4">
 				<li>
-					<a href="https://opensea.io/collection/randomice" target="_blank" rel="noreferrer">
+					<a href="https://opensea.io/" target="_blank" rel="noreferrer">
 						<svg
 							className="w-7 h-7"
 							viewBox="0 0 90 90"
@@ -34,7 +34,7 @@ export default function HeaderSocial() {
 				</li>
 
 				<li>
-					<a href="https://discord.gg/Randomice" target="_blank" rel="noreferrer">
+					<a href="https://discord.gg/Fcgxqusezw" target="_blank" rel="noreferrer">
 						<svg
 							className="w-7 h-7"
 							stroke="currentColor"
@@ -48,7 +48,7 @@ export default function HeaderSocial() {
 					</a>
 				</li>
 				<li>
-					<a href="https://etherscan.io/address/" target="_blank" rel="noreferrer">
+					<a href="https://etherscan.io/address/0xb8e220303cbcca9b9bb7728e02569cfddc036c39#code" target="_blank" rel="noreferrer">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 293.775 293.667"

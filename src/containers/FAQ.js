@@ -148,10 +148,10 @@ export default function FAQ() {
 							<ul>
 								<li>
 									<p className="mt-4 lg:text-2xl text-xl leading-normal text-justify text-gray-600 font-flower ">
-										RandoMice were created as a nice little gift to the awesome comunities of Anonymice and Doodles and don&apos;t promise anything but positive vibes. {""}
+										RandoMice were created as a nice little gift to the awesome communities of Anonymice and Doodles and don&apos;t promise anything but positive vibes. {""}
 
 										  <p>&nbsp;</p>
-										  It&apos;s up to the comunity to take the RandoMice to a different level.
+										  It&apos;s up to the community to take the RandoMice to a different level.
 										  									    
 									</p>
 								</li>
