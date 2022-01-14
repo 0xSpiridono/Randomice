@@ -64,7 +64,7 @@ export default function HeroInfo({ nftPrice, maxMintAmount }) {
 			<div className="flex justify-center" >
 			<ul className="flex items-center space-x-20">
 				<li>
-					<a href="https://opensea.io/" target="_blank" rel="noreferrer">
+					<a href="https://opensea.io/collection/randomice" target="_blank" rel="noreferrer">
 						<svg
 							className="w-10 h-10"
 							viewBox="0 0 90 90"

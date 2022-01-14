@@ -3,7 +3,7 @@ export default function HeaderSocial() {
 		<nav aria-label="Contact Menu">
 			<ul className="flex items-center px-8 py-1 space-x-4">
 				<li>
-					<a href="https://opensea.io/" target="_blank" rel="noreferrer">
+					<a href="https://opensea.io/collection/randomice" target="_blank" rel="noreferrer">
 						<svg
 							className="w-7 h-7"
 							viewBox="0 0 90 90"
