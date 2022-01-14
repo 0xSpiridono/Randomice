@@ -77,7 +77,7 @@ export default function HeroMint({
   if (!isPublicSaleActive) {
     return (
       <h3 className="mt-4 font-semibold text-center text-6xl text-purple-800 font-flower">
-        COMING SOON!
+        SOLD OUT!
       </h3>
     );
   } else {
