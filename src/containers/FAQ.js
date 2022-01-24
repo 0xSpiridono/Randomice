@@ -148,10 +148,13 @@ export default function FAQ() {
 							<ul>
 								<li>
 									<p className="mt-4 lg:text-2xl text-xl leading-normal text-justify text-gray-600 font-flower ">
-										RandoMice were created as a nice little gift to the awesome communities of Anonymice and Doodles and don&apos;t promise anything but positive vibes. {""}
+										RandoMice were created as a nice little gift to the awesome community of Anonymice and didn&apos;t promise anything but positive vibes at the start. {""}
 
+										<p>&nbsp;</p>
+										After a successful launch, it was clear that the community wants the RandoMcie to have a long term future, so we gathered a team of 
+										awesome and creative people to take the project to a different level.
 										  <p>&nbsp;</p>
-										  It&apos;s up to the community to take the RandoMice to a different level.
+										  Stay tuned for the announcements!
 										  									    
 									</p>
 								</li>
@@ -442,7 +445,7 @@ export default function FAQ() {
 							<ul>
 								<li>
 									<p className="mt-4 lg:text-2xl text-xl leading-normal text-justify text-gray-600 font-flower ">
-										RandoMice were created as a fun collection catering to awesome NFT communities of Anonymice and Doodles and are
+										RandoMice were created as a fun collection catering to awesome NFT community of Anonymice and are
 										intended for people to enjoy collecting, not as a financial
 										instrument. The creator makes absolutely no promises or
 										guarantees regarding the value of the RandoMice. Hopefully

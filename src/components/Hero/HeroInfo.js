@@ -22,23 +22,11 @@ export default function HeroInfo({ nftPrice, maxMintAmount }) {
 						<li className="flex items-start">
 							<span className="flex items-center h-6 sm:h-7">🐭</span>
 							<p className="ml-2 font-flower">
-								Free to claim by owners of {" "}
-										<a href="https://opensea.io/collection/anonymice" target="_blank" rel="noreferrer" className="font-semibold text-purple-600 hover:text-cyan-700">Anonymice</a> (including 
-										 <a href="https://opensea.io/collection/anonymicebreeding" target="_blank" rel="noreferrer" className="font-semibold text-purple-600 hover:text-cyan-700">Baby Mice</a>!) and 
-										 
-										 <a href="https://opensea.io/collection/doodles-official" target="_blank" rel="noreferrer" className="font-semibold text-purple-600 hover:text-cyan-700"> Doodles </a>
-										  NFT collections, max 1 per wallet{" "}
+								A collection of 6,969 adorable collectible RandoMice, made with love for NFTs.
 								<p>&nbsp;</p>
 							</p>
 						</li>
-						<li className="flex items-start">
-							<span className="flex items-center h-6 sm:h-7">🐭</span>
-							<p className="ml-2 font-flower">
-								<a className="font-semibold text-purple-600">{nftPrice} ETH</a>{" "}
-								per RandoMouse for the rest, max {maxMintAmount} per transaction
-								<p>&nbsp;</p>
-							</p>
-						</li>
+
 						<li className="flex items-start">
 							<span className="flex items-center h-6 sm:h-7">🐭</span>
 							<p className="ml-2 font-flower">
@@ -53,15 +41,15 @@ export default function HeroInfo({ nftPrice, maxMintAmount }) {
 						<li className="flex items-start">
 							<span className="flex items-center h-6 sm:h-7">🐭</span>
 							<p className="ml-2 font-flower">
-								Completely free from empty promises and utility fads, RandoMice are here to provide
-								nothing more than <a className="font-semibold text-purple-600">fun and vibe</a>!{" "}
+								Released without any roadmap, promises and marketing, RandoMice sold out in 2 hours and gathered an amazing
+								community and team around them. <p>&nbsp;</p> Join our fun and friendly community and <a className="font-semibold text-purple-600">stay tuned for the updates on our future plans!</a>
 								<p>&nbsp;</p>
 							</p>
 						</li>						
 					</ul>			
 				</div>
 				<div className="flex justify-center" >
-			<ul className="flex items-center space-x-10">
+			<ul className="flex items-center space-x-10 ">
 				<li>
 					<a href="https://opensea.io/collection/randomice" target="_blank" rel="noreferrer">
 						<svg
