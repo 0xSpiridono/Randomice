@@ -22,7 +22,7 @@ export default function HeroInfo({ nftPrice, maxMintAmount }) {
 						<div className="flex items-start">
 							<span className="flex items-center h-6 sm:h-7">🐭</span>
 							<p className="ml-2 font-flower">
-								A collection of 6,969 adorable collectible RandoMice, made with love for NFTs.
+								A collection of <a className="font-semibold text-purple-600">6,969 adorable collectible mice</a>, made with love for NFTs.
 								<p>&nbsp;</p>
 							</p>
 						</div>
@@ -41,7 +41,7 @@ export default function HeroInfo({ nftPrice, maxMintAmount }) {
 						<div className="flex items-start">
 							<span className="flex items-center h-6 sm:h-7">🐭</span>
 							<p className="ml-2 font-flower">
-								Released without any roadmap, promises and marketing, RandoMice sold out in 2 hours and gathered amazing people around them. <p>&nbsp;</p> Join our fun and friendly community and <a className="font-semibold text-purple-600">stay tuned for the updates on our future plans!</a>
+								Released without any roadmap, promises and marketing, RandoMice <a className="font-semibold text-purple-600">sold out in 2 hours</a> and gathered amazing people around them. <p>&nbsp;</p> Join our fun and friendly community and <a className="font-semibold text-purple-600">stay tuned for the updates on our future plans!</a>
 								<p>&nbsp;</p>
 							</p>
 						</div>						
