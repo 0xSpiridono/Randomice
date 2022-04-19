@@ -111,30 +111,13 @@ export default function HeroMint({
               YOU ARE NOT <br></br> WHITELISTED!
             </h3>
           )}
-
-
-
-
-
-
-
           </>
         );
-
-
-
-
-
-
-
-
-        
       }
-
       return (
         <div className="px-4 py-2 mt-4 mb-8 text-center rounded-md">
 
-          
+         
         </div>
       );
     } else {
